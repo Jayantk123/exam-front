@@ -1,0 +1,50 @@
+<mat-card>
+    <div mat-subheader>
+      <h1>Delete Category</h1>
+    </div>
+  
+    <!-- {{category | json}} -->
+    <mat-card-content>
+      <div class="bootstrap-wrapper">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+              <div class="text-center">
+          <h2 >Select Category you want to delete:</h2>
+
+          <form (ngSubmit)="delete()">
+            <!-- <mat-form-field class="w100" appearance="outline">
+              <mat-label>ID</mat-label>
+              <input
+              [(ngModel)]="category.id"
+              autofocus
+                type="text"
+                name="id"
+              
+                matInput
+                placeholder="Enter ID here:"
+              />
+            </mat-form-field> -->
+
+            <mat-form-field appearance="fill" class="w100">
+              <mat-label>Title</mat-label>
+              <mat-select name="id" [(ngModel)]="category.id">
+                <mat-option *ngFor="let c of showcateg" [value]="c.cid">
+              
+                  {{c.title}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <div class="container text-center mt15">
+                <button mat-raised-button color="primary" type="submit">Delete</button>
+                <button mat-raised-button color="accent" type="reset" class="ml20">CLear</button>
+            </div>
+            </form>
+
+        </div>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  

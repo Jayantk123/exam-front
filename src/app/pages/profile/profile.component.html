@@ -1,0 +1,55 @@
+<mat-card class="mt20">
+  <h1>Profile Details</h1>
+  <mat-card-content>
+    <div class="bootstrap-wrapper">
+      <div class="container">
+        <div class="container text-center">
+          <img
+            src="{{login.getUser().profile}}"
+            class="profile-image"
+            alt=""
+          />
+<!-- {{user | json}} -->
+          <h1 class="mt20"> {{login.getUser().firstName}} {{login.getUser().lastName}} </h1>
+          <table class="table text-center">
+            <tr>
+              <td>Username</td>
+              <td>{{login.getUser().username}}</td>
+           
+            </tr>
+            <tr>
+              <td>Userid</td>
+              <td>{{login.getUser().id}}</td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>{{login.getUser().email}}</td>
+            </tr>
+            <tr>
+              <td>Phone No.</td>
+              <td>{{login.getUser().phone}}</td>
+            </tr>
+            <tr>
+              <td>Role</td>
+              <td>{{login.getUser().authorities[0].authority}}</td>
+            </tr>
+            <tr>
+              <td>Status</td>
+              <td>{{login.getUser().enabled?"Active":"Not Active"}}</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <!-- details -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions class="text-center">
+      <button mat-raised-button color="primary">Update</button>
+      <button mat-raised-button color="accent">SHARE</button>
+  </mat-card-actions>
+</mat-card>

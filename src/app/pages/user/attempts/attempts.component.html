@@ -1,0 +1,68 @@
+<mat-card >
+    <mat-card-header>
+    <h1> Attempted Quizzes: </h1>
+    </mat-card-header>
+
+</mat-card>
+
+<!-- <mat-card>
+    {{results | json}} 
+</mat-card> -->
+
+
+<div *ngFor="let f of results" class="mt10">
+
+    <mat-card *ngIf="f.username==login.getUser().username">
+
+        <mat-card-header>
+            <h2>Category: {{f.catname}} | <span style="color:rgb(241, 66, 66)">{{f.quizname}}</span></h2>
+        </mat-card-header>
+        <mat-card-content>
+         
+            <h3></h3>
+            <b>
+            <div class="row text-center" style="color:#3f51b5">
+                <div class="col-md-2">
+                    Total Ques
+                </div>
+                <div class="col-md-2">
+                    Ques Attempted
+                </div>
+                <div class="col-md-2">
+                    Correct Answers
+                </div>
+                <div class="col-md-2">
+                    Total Marks
+                </div>
+                <div class="col-md-2">
+                    Marks Got
+                </div>
+            </div>
+        </b>
+        <div class="row mt10 text-center">
+            <div class="col-md-2">
+               {{f.totalques}}
+            </div>
+            <div class="col-md-2">
+               {{f.quesatt}}
+            </div>
+            <div class="col-md-2">
+               {{f.correctans}}
+            </div>
+            <div class="col-md-2">
+                {{f.totalmarks}}
+            </div>
+            <div class="col-md-2">
+              {{f.marksgot}}
+            </div>
+        </div>
+
+
+        </mat-card-content>
+        <!-- <h1>{{f.rid}}</h1> -->
+    </mat-card>
+    <!-- {{login.getUser().username}}
+    {{f.username}} -->
+ 
+
+    </div>

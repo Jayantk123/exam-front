@@ -1,0 +1,72 @@
+<mat-card class="mt20">
+    <mat-card-header>
+        <mat-card-title>
+            <h1>Results</h1>
+        </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Result ID:</th>
+                <th scope="col">User ID:</th>
+                <th scope="col">Username:</th>
+                <th scope="col">Name</th>
+                <th scope="col">Category Id:</th>
+                <th scope="col">Category Name:</th>
+                <th scope="col">Quiz Id:</th>
+                <th scope="col">Quiz Name:</th>
+                <th scope="col">Total Marks:</th>
+                <th scope="col">Marks Got:</th>
+                <th scope="col">Total Ques:</th>
+                <th scope="col">Ques Attended:</th>
+                <th scope="col">Correct Answers:</th>
+             
+
+              </tr>
+            </thead>
+            <tbody *ngFor="let r of result">
+              <tr class="text-center">
+                <th style="color:rgb(117, 114, 114);">{{ r.rid }}</th>
+                <th style="color:rgb(238, 73, 73);">{{ r.userid }}</th>
+                <th>{{ r.username }}</th>
+                <th>{{ r.firstname }} {{r.lastname}}</th>
+                <th style="color:rgb(238, 73, 73);">{{ r.catid }}</th>
+                <th>{{ r.catname }}</th>
+                <th style="color:rgb(238, 73, 73);">{{ r.quizid }}</th>
+                <th>{{ r.quizname }}</th>
+                <th style="color:rgb(45, 12, 233);">{{ r.totalmarks }}</th>
+                <th style="color:rgb(10, 231, 128);">{{ r.marksgot }}</th>
+                <th style="color:#2dc5f3;">{{ r.totalques }}</th>
+                <th style="color:#2dc5f3;">{{ r.quesatt }}</th>
+                <th style="color:rgb(14, 230, 50);">{{r.correctans}}</th>
+
+
+                <!-- {{result | json}} -->
+              </tr>
+            </tbody>
+          </table>
+          
+          <!-- <mat-card>
+              <mat-card-header>
+                
+                    <div class="bootstrap-wrapper">
+                    <div class="row">
+        
+                      
+                   
+                     </div>
+                    </div>
+               
+              </mat-card-header>
+          </mat-card> -->
+
+          <div class="container text-center mt20">
+              <button mat-raised-button color="primary" (click)="print()"> Print</button>
+          </div>
+          
+    </mat-card-content>
+</mat-card>
+
+

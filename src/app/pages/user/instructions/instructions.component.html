@@ -1,0 +1,81 @@
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <mat-card class="mt20">
+          <mat-card-header>
+            <!-- heading -->
+            <mat-card-title> Read the instructions carefully. </mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="ml20">
+            <!-- content -->
+            <h2>{{ quiz.title }} Quiz</h2>
+            <p>{{ quiz.description }}</p>
+
+            <mat-divider></mat-divider>
+
+            <br />
+
+            <h1>Before starting the exam:</h1>
+            <ul>
+              <li>Make sure you have a good and stable internet connection.</li>
+              <li>
+                Make sure you DO NOT open any other link/tab on your browser
+                apart from the exam link during the online exam.
+              </li>
+              <li>
+                Listen to all the instructions by invigilators carefully and
+                comply with them meticulously.
+              </li>
+            </ul>
+            <h1>During the exam:</h1>
+
+            <ul>
+              <li>
+                This quiz is only for practice purpose and Submit your quiz
+                within <b>{{ quiz.numberofQuestions * 2 }} Minutes</b>.
+              </li>
+              <li>
+                There are <b>{{ quiz.numberofQuestions }} questions</b> in this
+                quiz and Each questions carries
+                <b>{{ quiz.maxMarks / quiz.numberofQuestions  | number:'.2-2'}} Marks</b>. No
+                negative marks for wrong answer.
+              </li>
+              <li>
+                Do not close the browser during the test before your exam is
+                complete.
+              </li>
+              <li>
+                Do not click the ‘<b>BACK</b>’ button of browser during exam.
+              </li>
+            </ul>
+
+            <mat-divider></mat-divider>
+            <br />
+            <h1>General instructions:</h1>
+            <ul>
+              <li>
+                Make sure you appear for the online exam sitting alone in a well
+                lit room with no background noise during the entire process of
+                the exam.
+              </li>
+              <li>
+                For subjects that requires rough work, make sure you do the
+                rough works on blank sheet and not on any notebook.
+              </li>
+              <li>
+                If any student is found to use unfair means or if the student is
+                not visible on camera during the entire course of the online
+                exam, that student’s exam will be disqualified .
+              </li>
+            </ul>
+          </mat-card-content>
+          <mat-card-actions class="text-center">
+            <!-- action -->
+            <button mat-raised-button color="warn" (click)="startquiz()">Start Quiz</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

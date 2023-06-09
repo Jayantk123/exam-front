@@ -1,0 +1,4 @@
+.example-header-image {
+    background-image: url('../quiz.png');
+    background-size: cover;
+  }
